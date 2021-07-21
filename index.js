@@ -8,8 +8,12 @@ class Timer {
     }
 
     start = () => {
-        console.log(this);
-        console.log("Time to start the timer!");
+        this.tick();
+        setInterval(this.tick, 1000);
+    }
+
+    tick = () => {
+        console.log("tick!");
     }
 }
 
